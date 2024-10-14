@@ -1,0 +1,12 @@
+{
+    "plex": {
+        "access_token": "y6zdfpYG3QP9crx4Dyid",
+        "server_url": "https://helpful-absolutely-rooster.ngrok-free.app"
+    },
+    "bot":{
+        "token": "7787124341:AAF9ifTDnnxDzPLPBnHhD8wdMj4t8ygB9yw"
+    },
+    "path": {
+        "movie" : "/Videos"
+    }
+}
