@@ -20,7 +20,7 @@ class DetectEventFile(FileSystemEventHandler, BaseService):
         _event = event.event_type
         _path = event.src_path
         extension = os.path.splitext(_path)[1]
-        if _event in ['created']:
+        if _event in ['created'] and extension in self.file_types:
             self.logger.info(f"{_event} directory: {_path}".capitalize())
             info_movie = self.plex_service.get_last_added_movie()
             self.logger.info(f"Information movie: {info_movie}")

@@ -1,6 +1,7 @@
 from abc import abstractmethod, ABC
 
 from app.services.base_service import BaseService
+from main import send_notification
 
 
 class SendMessageAbstract(ABC):
@@ -23,8 +24,6 @@ class SendMessage(SendMessageAbstract, BaseService, ):
 
     def send_message(self, template, image_url) -> None:
         self.logger.info(f'Sending message to {image_url}')
-        from app.tasks import TaskSend
-        send_notification = TaskSend()
         send_notification.apply_async(
             args=(template, image_url)
         )

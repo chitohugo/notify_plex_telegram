@@ -1,5 +1,3 @@
-import asyncio
-
 from celery import Task
 from dependency_injector.wiring import inject, Provide
 
